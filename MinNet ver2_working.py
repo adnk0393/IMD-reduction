@@ -6,7 +6,7 @@
 
 import pandas as pd
 from joblib import load
-from randcomp import *
+#from randcomp import *
 import streamlit as st
 
 
