@@ -2,8 +2,6 @@ import numpy as np
 import pandas as pd
 import os
 
-os.chdir(os.path.abspath( os.path.dirname( __file__ ) )) #change the current working directory to location of the script
-
 # data to be returned in the format SiO2, TiO2, Al2O3, FeO, MnO, MgO, CaO, Na2O, K2O
 
 oxide = pd.read_excel("oxide_data.xlsx", sheet_name="Sheet1",index_col=0,header=0)
