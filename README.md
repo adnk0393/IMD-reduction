@@ -1,17 +1,16 @@
 # MinNet
 
-MinNet is a machine learning tool designed for mineral classification. It features a Streamlit web application that demonstrates how aggregating substituting cations in a mineral composition affects dimensionality reduction. The repository also includes comprehensive scripts for model training, validation, and data management.
+MinNet is a implementation of IMD reduction method to demonstrate its effect on automated mineral classification. It features a Streamlit web application that demonstrates how aggregating substituting cations in a mineral composition affects dimensionality reduction. The repository also includes comprehensive scripts for demonstration of model training, and validation used in the study.
 
 ## 📁 Repository Structure
 
-* **`app.py`**: Main Streamlit web application for interactive data visualization.
-* **`scripts/`**: Directory containing Python scripts for model training and evaluation.
-* **`data/`**: Directory containing the training and validation datasets.
+* **`main.py`**: Main Streamlit web application for interactive data visualization.
+* **`model training and validation/`**: Directory containing Python scripts for model training and evaluation used in the study.
+* **`data/`**: Directory containing the training and validation datasets used in the study.
 
 ## 🚀 Key Features
 
-* **Cation Aggregation**: Simplifies complex mineral compositions by grouping substituting elements.
-* **Dimensionality Reduction**: Visualizes how composition simplification impacts accuracy of mineral classification.
+* **Cation Aggregation**: Simplifies complex mineral compositions by summing up substituting elements.
 * **Machine Learning Pipeline**: Includes reproducible scripts to train and validate classification models.
 * **Interactive UI**: Offers an intuitive Streamlit interface to test the app in real-time.
 
@@ -26,15 +25,15 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 
 ### Input Feature Combinations
 * **C1 (Raw Composition)**: 11 standard oxides (SiO₂, TiO₂, Al₂O₃, FeO, MnO, MgO, CaO, Na₂O, K₂O, P₂O₅, CO₂).
-* **C2 (Divalent Aggregation)**: Aggregates FeO, MnO, and MgO into a single feature via summation.
-* **C3 (Dual Aggregation)**: Aggregates (FeO + MnO + MgO) into one feature, and Alkali metals (Na₂O + K₂O) into another.
+* **C2 (Divalent Aggregation)**: Aggregates FeO, MnO, and MgO into a single feature (M) via summation.
+* **C3 (Dual Aggregation)**: Aggregates (FeO + MnO + MgO) into one feature (M), and Alkali metals (Na₂O + K₂O) into another (A).
 * **C4 (PCA Representation)**: A 5-component Principal Component Analysis (PCA) representation of C1, optimized via scree plot analysis.
 
 ## 🛠️ Installation
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com
+   git clone https://github.com](https://github.com/adnk0393/MinNet_v1/
    cd MinNet
    ```
 
