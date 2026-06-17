@@ -29,7 +29,23 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 * **C3 (Dual Aggregation)**: Aggregates (FeO + MnO + MgO) into one feature (M), and Alkali metals (Na₂O + K₂O) into another (A).
 * **C4 (PCA Representation)**: A 5-component Principal Component Analysis (PCA) representation of C1, optimized via scree plot analysis.
 
+# Project Name
+
+![Python Version](https://shields.io)
+![Dependencies](https://shields.io)
+
+## Requirements
+
+### Prerequisites
+* **Python 3.10.11** 
+
+### Dependencies
+All required libraries are listed in the requirements.txt file. Install them using pip:
+
+```bash
+pip install -r main/requirements.txt
 ## 🛠️ Installation
+
 
 1. Clone this repository:
    ```bash
