@@ -11,9 +11,9 @@ MinNet is a machine learning tool designed for mineral classification. It featur
 ## 🚀 Key Features
 
 * **Cation Aggregation**: Simplifies complex mineral compositions by grouping substituting elements.
-* **Dimensionality Reduction**: Visualizes how composition simplification impacts data complexity.
+* **Dimensionality Reduction**: Visualizes how composition simplification impacts accuracy of mineral classification.
 * **Machine Learning Pipeline**: Includes reproducible scripts to train and validate classification models.
-* **Interactive UI**: Offers an intuitive Streamlit interface to explore data changes in real-time.
+* **Interactive UI**: Offers an intuitive Streamlit interface to test the app in real-time.
 
 ## 📊 Experimental Setup
 
