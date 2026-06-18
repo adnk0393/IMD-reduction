@@ -23,14 +23,6 @@ This framework removes compositional redundancy, enforces strict stoichiometric 
 * **MinNet Integration:** Contains the backend engine powering **MinNet**, a deployed web tool that integrates IMD reduction for rapid, reproducible mineral-group identification from unlabeled electron microprobe (EPMA) or SEM-EDS datasets.
 
 ---
-
-## 📁 Repository Structure
-
-* **`model training and validation/`**: Directory containing Python scripts for model training and evaluation used in the study.
-* **`data/`**: Directory containing the training and validation datasets used in the study.
-* **`app`**: Main Streamlit web application for interactive data visualization.
-
-
 ## 📊 Experimental Setup
 
 MinNet evaluates **three machine learning models** across **four distinct input combinations (C1–C4)** to study the effects of chemical abstraction and dimensionality reduction:
@@ -45,6 +37,13 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 * **C2 (Divalent Aggregation)**: Aggregates FeO, MnO, and MgO into a single feature (M) via summation.
 * **C3 (Dual Aggregation)**: Aggregates (FeO + MnO + MgO) into one feature (M), and Alkali metals (Na₂O + K₂O) into another (A).
 * **C4 (PCA Representation)**: A 5-component Principal Component Analysis (PCA) representation of C1, optimized via scree plot analysis.
+
+## 📁 Repository Structure
+* **`MinNet app`**: Main Streamlit web application (using KNN and C3 combination) for interactive data visualization.
+* **`Pre-processing scripts`**: Contains the Python scripts used to pre-process GEOROC dataset files to obtain representative training data.
+* * **`Trained model`**: Contains the models generated (alongwith data scalering and labeling functions) during the study. 
+* **`Data/`**: Contains the training and validation datasets used in the study.
+* **`Model training and validation/`**: Contains Python scripts for model training and evaluation used in the study.
 
 ## Requirements
 
