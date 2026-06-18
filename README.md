@@ -1,18 +1,35 @@
-# MinNet
+# Inherent mineral dimensionality (IMD) reduction
+## 🌟 Core Overview
 
-MinNet is a implementation of IMD reduction method to demonstrate its effect on automated mineral classification. It features a Streamlit web application that demonstrates how aggregating substituting cations in a mineral composition affects dimensionality reduction. The repository also includes comprehensive scripts for demonstration of model training, and validation used in the study.
+Automated mineral identification from oxide analyses faces major hurdles: high dimensionality (many measured oxides), compositional redundancy (overlapping elemental substitutions), and severe class imbalance (uneven representation of minerals). 
 
-## 📁 Repository Structure
+Conventional approaches (e.g., PCA, SMOTE) are unable on their own to resolve intra-class compositional bias caused by incomplete compositional representation and redundancy. For example, while iron and magnesium substitute for one another in Fe-Mg minerals, treating them as separate variables inflates dimensionality without providing novel crystal-chemical insight. Furthermore, because Mg-rich olivines are far more common than Fe-rich variants in nature, a model trained on such imbalanced datasets will inherently struggle to classify rare Fe-rich compositions, despite their shared structural identity.
 
-* **`main.py`**: Main Streamlit web application for interactive data visualization.
-* **`model training and validation/`**: Directory containing Python scripts for model training and evaluation used in the study.
-* **`data/`**: Directory containing the training and validation datasets used in the study.
+**IMD Reduction** solves this as a domain-informed preprocessing step. It converts raw oxide analyses into moles and aggregates substitutable oxides into crystallographically meaningful variables prior to machine-learning classification:
+* **M-site aggregation:** Fe + Mg + Mn → M
+* **A-site aggregation:** Na + K → A
+
+This framework removes compositional redundancy, enforces strict stoichiometric consistency, and embeds crystal-chemical logic directly into your model's input space.
+
+---
 
 ## 🚀 Key Features
 
-* **Cation Aggregation**: Simplifies complex mineral compositions by summing up substituting elements.
-* **Machine Learning Pipeline**: Includes reproducible scripts to train and validate classification models.
-* **Interactive UI**: Offers an intuitive Streamlit interface to test the app in real-time.
+* **Crystal-Chemical Preprocessing:** Aggregates oxides in mol.% into structural site variables to enforce physical petrological constraints.
+* **Rigorous Benchmark Suite:** Codebase to deploy and evaluate **12 classifier-input combinations** across 3 machine learning algorithms (Support Vector Machines, k-Nearest Neighbors, Random Forests) and 4 input schemes (raw oxides, PCA, IMD-M, and IMD-M+A).
+* **High-Performance Training Pipeline:** Tailored for large mineral-chemistry datasets, originally benchmarked on a curated baseline of **47,031 normalized oxide compositions** spanning 19 common rock-forming minerals.
+* **Proven Stability (>99% Accuracy):** Built-in evaluation tracking proves that IMD-reduced inputs (especially the M+A variant) maintain stable class-wise performance (>99%), dramatically outperforming raw oxides or PCA on compositionally complex groups (amphiboles, pyroxenes, garnets) and rare boundary-proximal compositions.
+* **Independent Validation Module:** Includes data and pipelines to test model generalization using an independent compilation of **3,445 mineral compositions** to pinpoint and evaluate edge cases (e.g., amphibole-pyroxene overlaps).
+* **MinNet Integration:** Contains the backend engine powering **MinNet**, a deployed web tool that integrates IMD reduction for rapid, reproducible mineral-group identification from unlabeled electron microprobe (EPMA) or SEM-EDS datasets.
+
+---
+
+## 📁 Repository Structure
+
+* **`model training and validation/`**: Directory containing Python scripts for model training and evaluation used in the study.
+* **`data/`**: Directory containing the training and validation datasets used in the study.
+* **`app`**: Main Streamlit web application for interactive data visualization.
+
 
 ## 📊 Experimental Setup
 
