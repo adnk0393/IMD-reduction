@@ -41,7 +41,7 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 ## 📁 Repository Structure
 * **`MinNet app`**: Main Streamlit web application (using KNN and C3 combination) for interactive data visualization.
 * **`Pre-processing scripts`**: Contains the Python scripts used to pre-process GEOROC dataset files to obtain representative training data.
-* * **`Trained model`**: Contains the models generated (alongwith data scalering and labeling functions) during the study. 
+* **`Trained model`**: Contains the models generated (alongwith data scalering and labeling functions) during the study. 
 * **`Data/`**: Contains the training and validation datasets used in the study.
 * **`Model training and validation/`**: Contains Python scripts for model training and evaluation used in the study.
 
