@@ -61,7 +61,7 @@ pip install -r main/requirements.txt
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com](https://github.com/adnk0393/MinNet_v1/
+   git clone https://github.com](https://github.com/adnk0393/MinNet_v1/](https://github.com/adnk0393/IMD-reduction/
    cd MinNet
    ```
 
