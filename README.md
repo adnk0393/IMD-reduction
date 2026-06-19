@@ -100,7 +100,7 @@ jupyter notebook
 
 [Dr. Sourabh Bhattacharya (IISER Mohali)](mailto:sourabh@iisermohali.ac.in)
 
-[Dr. Jitendra Kumar Roy (IIT Kharagpur)](mailto: )
+[Dr. Jitendra Kumar Roy (IIT Kharagpur)](mailto:ph21010@iisermohali.ac.in)
 
 ---
 
