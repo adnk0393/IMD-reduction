@@ -48,7 +48,9 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 ## Requirements
 
 ### Prerequisites
-* **Python 3.10.11** 
+* **Python 3.10.11**
+* **Jupyter Notebook** (Only for training and evaluating the ML models)
+* **Streamlit** package (for running the MinNet app)
 
 ### Dependencies
 All required libraries are listed in the requirements.txt file. Install them using pip:
@@ -62,11 +64,6 @@ pip install -r main/requirements.txt
    ```bash
    git clone https://github.com](https://github.com/adnk0393/MinNet_v1/](https://github.com/adnk0393/IMD-reduction/
    cd MinNet
-   ```
-
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
    ```
 
 ## 💻 Usage
