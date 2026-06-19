@@ -9,7 +9,7 @@ Conventional approaches (e.g., PCA, SMOTE) are unable on their own to resolve in
 * **M-site aggregation:** Fe + Mg + Mn → M
 * **A-site aggregation:** Na + K → A
 
-This framework removes compositional redundancy, enforces strict stoichiometric consistency, and embeds crystal-chemical logic directly into your model's input space.
+By summing substituting elements at each crystallographic site, this framework eliminates compositional redundancy, maintains strict stoichiometric consistency, and embeds crystal-chemical constraints directly into the model's input space. Consequently, the model interprets mineral chemistry through site-occupancy data—a more robust proxy for mineral identification—rather than relying on highly volatile individual elemental components.
 
 ---
 
