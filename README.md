@@ -1,26 +1,27 @@
-# Inherent mineral dimensionality (IMD) reduction
-## 🌟 Core Overview
+# MinNet: IMD preprocessing for automated mineral-group classification
+## 🌟 Core overview
 
-Automated mineral identification from oxide analyses faces major hurdles: high dimensionality (many measured oxides), compositional redundancy (overlapping elemental substitutions), and severe class imbalance (uneven representation of minerals). 
+MinNet is a Python/Streamlit implementation of Inherent Mineral Dimensionality (IMD) preprocessing for automated mineral-group classification from oxide-composition tables. It is designed for EPMA- and SEM–EDS-derived mineral analyses where the input consists of major-oxide wt.% values rather than image-based mineral maps.
 
-Conventional approaches (e.g., PCA, SMOTE) are unable on their own to resolve intra-class compositional bias caused by incomplete compositional representation and redundancy. For example, while iron and magnesium substitute for one another in Fe-Mg minerals, treating them as separate variables inflates dimensionality without providing novel crystal-chemical insight. Furthermore, because Mg-rich olivines are far more common than Fe-rich variants in nature, a model trained on such imbalanced datasets will inherently struggle to classify rare Fe-rich compositions, despite their shared structural identity.
+Automated mineral identification from oxide tables is difficult because such datasets commonly contain incomplete oxide reporting, uneven class representation and chemically redundant variables. IMD addresses the redundancy part of this problem by converting oxide wt.% values to normalized mol.% and then aggregating selected substitutable oxides into fixed, chemically interpretable features before supervised classification.
 
-**IMD Reduction** solves this as a domain-informed preprocessing step. It converts raw oxide analyses into moles and aggregates substitutable oxides into crystallographically meaningful variables prior to machine-learning classification:
-* **M-site aggregation:** Fe + Mg + Mn → M
-* **A-site aggregation:** Na + K → A
+In the implementation used here:
 
-By summing substituting elements at each crystallographic site, this framework eliminates compositional redundancy, maintains strict stoichiometric consistency, and embeds crystal-chemical constraints directly into the model's input space. Consequently, the model interprets mineral chemistry through site-occupancy data—a more robust proxy for mineral identification—rather than relying on highly volatile individual elemental components.
+- FeO + MgO + MnO are combined into a ferromagnesian aggregate, M.
+- Na2O + K2O are combined into an alkali aggregate, A.
+
+These aggregate variables are not intended to represent complete crystallographic site occupancies for all mineral groups. They are crystal-chemically motivated proxies for major substitutional trends relevant to group-level mineral classification.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Key features
 
-* **Crystal-Chemical Preprocessing:** Aggregates oxides in mol.% into structural site variables to enforce physical petrological constraints.
-* **Rigorous Benchmark Suite:** Codebase to deploy and evaluate **12 classifier-input combinations** across 3 machine learning algorithms (Support Vector Machines, k-Nearest Neighbors, Random Forests) and 4 input schemes (raw oxides, PCA, IMD-M, and IMD-M+A).
-* **High-Performance Training Pipeline:** Tailored for large mineral-chemistry datasets, originally benchmarked on a curated baseline of **47,031 normalized oxide compositions** spanning 19 common rock-forming minerals.
-* **Proven Stability (>99% Accuracy):** Built-in evaluation tracking proves that IMD-reduced inputs (especially the M+A variant) maintain stable class-wise performance (>99%), dramatically outperforming raw oxides or PCA on compositionally complex groups (amphiboles, pyroxenes, garnets) and rare boundary-proximal compositions.
-* **Independent Validation Module:** Includes data and pipelines to test model generalization using an independent compilation of **3,445 mineral compositions** to pinpoint and evaluate edge cases (e.g., amphibole-pyroxene overlaps).
-* **MinNet Integration:** Contains the backend engine powering **MinNet**, a deployed web tool that integrates IMD reduction for rapid, reproducible mineral-group identification from unlabeled electron microprobe (EPMA) or SEM-EDS datasets.
+- Domain-informed preprocessing of oxide-composition tables using IMD feature aggregation.
+- Evaluation of 12 classifier-input combinations using three classifiers: Support Vector Machine, k-Nearest Neighbors and Random Forest.
+- Four input schemes: raw oxides, IMD-M, IMD-M+A and PCA-transformed inputs.
+- Training and testing on 47,031 normalized oxide compositions spanning 19 common rock-forming mineral groups.
+- External validation on 3,445 independently compiled mineral compositions.
+- Streamlit-based MinNet application for reproducible group-level mineral identification from EPMA- or SEM–EDS-derived oxide tables.
 
 ## 📊 Experimental Setup
 
@@ -33,18 +34,19 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 
 ### Input Feature Combinations
 * **C1 (Raw Composition)**: 11 standard oxides (SiO₂, TiO₂, Al₂O₃, FeO, MnO, MgO, CaO, Na₂O, K₂O, P₂O₅, CO₂).
-* **C2 (Divalent Aggregation)**: Aggregates FeO, MnO, and MgO into a single feature (M) via summation.
-* **C3 (Dual Aggregation)**: Aggregates (FeO + MnO + MgO) into one feature (M), and Alkali metals (Na₂O + K₂O) into another (A).
+* **C2 (IMD-M)**: Replaces FeO, MnO and MgO with the ferromagnesian aggregate M = FeO + MnO + MgO.
+* **C3 (IMD-M+A)**: Replaces FeO, MnO and MgO with M, and Na2O and K2O with the alkali aggregate A = Na2O + K2O.
 * **C4 (PCA Representation)**: A 5-component Principal Component Analysis (PCA) representation of C1, optimized via scree plot analysis.
 
 ---
 
 ## 📁 Repository Structure
-* **`MinNet app`**: Main Streamlit web application (using KNN and C3 combination) for interactive data visualization.
-* **`Pre-processing scripts`**: Contains the Python scripts used to pre-process GEOROC dataset files to obtain representative training data.
-* **`Trained model`**: Contains the models generated (alongwith data scalering and labeling functions) during the study. 
-* **`Data/`**: Contains the training and validation datasets used in the study.
-* **`Model training and validation/`**: Contains Python scripts for model training and evaluation used in the study.
+* **`MinNet app/`**: Streamlit application for mineral-group prediction using the trained KNN model and C3 input scheme.
+* **`Pre-processing scripts/`**: Scripts used to preprocess and filter mineral-composition datasets.
+* **`Trained model/`**: Trained models, scaler objects and label-encoding files generated during the study.
+* **`Data/`**: Training, testing and external-validation datasets used in the manuscript.
+* **`Model training and validation/`**: Notebooks/scripts used for model training, validation and benchmark evaluation.
+* **`requirements.txt`**: Python package dependencies required to run the application and reproduce the workflow.
 
 ---
 
@@ -88,9 +90,7 @@ Run the scripts (.ipynb) using Jupyter notebook to retrain or evaluate the KNN, 
 cd IMD-reduction-fixed-main/model training and evaluation scripts/
 jupyter notebook
 ```
-**Note** Enure that the training and validation(or evaluation) datasets (in .xlsx format) are present in the same folder as the scripts. 
-         Also make sure the first column of the dataset should be SNo or any unique point identifier and not the compositional columns.
-         Order of Oxides doesn't matter as long as 11 required oxides are present.
+**Note:** Ensure that the training and validation datasets are available in the expected folder path specified in each notebook. The first column should contain a sample or point identifier, such as `SNo`, and should not be one of the oxide-composition columns. The order of oxide columns does not matter if all required oxide columns are present with the expected names.
 
 ---
 
