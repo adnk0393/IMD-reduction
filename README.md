@@ -22,7 +22,6 @@ By summing substituting elements at each crystallographic site, this framework e
 * **Independent Validation Module:** Includes data and pipelines to test model generalization using an independent compilation of **3,445 mineral compositions** to pinpoint and evaluate edge cases (e.g., amphibole-pyroxene overlaps).
 * **MinNet Integration:** Contains the backend engine powering **MinNet**, a deployed web tool that integrates IMD reduction for rapid, reproducible mineral-group identification from unlabeled electron microprobe (EPMA) or SEM-EDS datasets.
 
----
 ## 📊 Experimental Setup
 
 MinNet evaluates **three machine learning models** across **four distinct input combinations (C1–C4)** to study the effects of chemical abstraction and dimensionality reduction:
@@ -45,14 +44,16 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 * **`Data/`**: Contains the training and validation datasets used in the study.
 * **`Model training and validation/`**: Contains Python scripts for model training and evaluation used in the study.
 
+---
+
 ## Requirements
 
 ### Prerequisites
 * **Python 3.10.11**
 * **Jupyter Notebook** (Only for training and evaluating the ML models)
-* **Streamlit** package (for running the MinNet app)
+* **Streamlit** package (Only for running the MinNet app offline)
 
-### Dependencies
+### Required Python libraries
 All required libraries are listed in the requirements.txt file. Install them using pip:
 
 ```bash
@@ -63,15 +64,18 @@ pip install -r main/requirements.txt
 1. Clone this repository:
    ```bash
    git clone https://github.com](https://github.com/adnk0393/MinNet_v1/](https://github.com/adnk0393/IMD-reduction/
-   cd MinNet
+   cd IMD-reduction
    ```
 
 ## 💻 Usage
 
-### Running the Streamlit App
+### Running the Streamlit App 
+Visit the link: https://minnet.streamlit.com
+
+### Running the Streamlit App offline
 Launch the interactive web application to visualize dimensionality reduction:
 ```bash
-streamlit run app.py
+streamlit run MinNet app/main.py
 ```
 
 ### Training and Evaluation
