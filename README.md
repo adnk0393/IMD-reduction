@@ -96,11 +96,11 @@ jupyter notebook
 
 ## Contributors
 
-[Dr. Aditya Naik (IISER Mohali)](mailto:naik32.an@gmail.com)
+[Dr. Aditya Naik (Post-doctoral Fellow, IISER Mohali)](mailto:naik32.an@gmail.com)
 
-[Dr. Sourabh Bhattacharya (IISER Mohali)](mailto:sourabh@iisermohali.ac.in)
+[Dr. Sourabh Bhattacharya (Assistant Professor, IISER Mohali)](mailto:sourabh@iisermohali.ac.in)
 
-[Dr. Jitendra Kumar Roy (IIT Kharagpur)](mailto:ph21010@iisermohali.ac.in)
+[Dr. Jitendra Kumar Roy (NPDF Fellow, IIT Kharagpur)](mailto:royjitendra11@gmail.com)
 
 ---
 
