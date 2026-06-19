@@ -37,6 +37,8 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 * **C3 (Dual Aggregation)**: Aggregates (FeO + MnO + MgO) into one feature (M), and Alkali metals (Na₂O + K₂O) into another (A).
 * **C4 (PCA Representation)**: A 5-component Principal Component Analysis (PCA) representation of C1, optimized via scree plot analysis.
 
+---
+
 ## 📁 Repository Structure
 * **`MinNet app`**: Main Streamlit web application (using KNN and C3 combination) for interactive data visualization.
 * **`Pre-processing scripts`**: Contains the Python scripts used to pre-process GEOROC dataset files to obtain representative training data.
@@ -66,8 +68,9 @@ pip install -r main/requirements.txt
    git clone https://github.com](https://github.com/adnk0393/MinNet_v1/](https://github.com/adnk0393/IMD-reduction/
    cd IMD-reduction
    ```
+---
 
-## 💻 Usage
+## 💻 How to use
 
 ### Running the Streamlit App 
 Visit the link: https://minnet.streamlit.com
@@ -75,15 +78,19 @@ Visit the link: https://minnet.streamlit.com
 ### Running the Streamlit App offline
 Launch the interactive web application to visualize dimensionality reduction:
 ```bash
-streamlit run MinNet app/main.py
+cd IMD-reduction
+streamlit run app/main.py
 ```
 
 ### Training and Evaluation
-Run the pipeline scripts to retrain or evaluate the KNN, SVM, and RF models across combinations C1–C4:
+Run the scripts (.ipynb) using Jupyter notebook to retrain or evaluate the KNN, SVM, and RF models across combinations C1–C4:
 ```bash
 python scripts/train.py
 python scripts/evaluate.py
 ```
+**Note** Enure that the training and validation(/evaluation) datasets (in .xlsx format) are present in the same folder as the scripts.
+
+---
 
 ## 📄 License
 
