@@ -94,6 +94,14 @@ jupyter notebook
 
 ---
 
+## Contributors
+
+[Dr. Aditya Naik (IISER Mohali)](mailto: naik32.an@gmail.com)
+[Dr. Sourabh Bhattacharya (IISER Mohali)](mailto: sourabh@iisermohali.ac.in)
+[Dr. Jitendra Kumar Roy (IIT Kharagpur)](mailto: )
+
+---
+
 ## 📄 License
 
 This project is licensed under the **GNU GPL v2.0 License** - see the [LICENSE](LICENSE) file for details.
