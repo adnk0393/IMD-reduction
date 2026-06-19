@@ -78,17 +78,19 @@ Visit the link: https://minnet.streamlit.com
 ### Running the Streamlit App offline
 Launch the interactive web application to visualize dimensionality reduction:
 ```bash
-cd IMD-reduction
-streamlit run app/main.py
+cd IMD-reduction-fixed-main
+streamlit run Minnet app/main.py
 ```
 
 ### Training and Evaluation
 Run the scripts (.ipynb) using Jupyter notebook to retrain or evaluate the KNN, SVM, and RF models across combinations C1–C4:
 ```bash
-python scripts/train.py
-python scripts/evaluate.py
+cd IMD-reduction-fixed-main/model training and evaluation scripts/
+jupyter notebook
 ```
-**Note** Enure that the training and validation(/evaluation) datasets (in .xlsx format) are present in the same folder as the scripts.
+**Note** Enure that the training and validation(or evaluation) datasets (in .xlsx format) are present in the same folder as the scripts. 
+         Also make sure the first column of the dataset should be SNo or any unique point identifier and not the compositional columns.
+         Order of Oxides doesn't matter as long as 11 required oxides are present.
 
 ---
 
