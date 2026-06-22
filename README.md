@@ -61,10 +61,10 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 All required libraries are listed in the requirements.txt file. Install them using pip:
 
 1. Clone this repository:
-   ```bash
+```bash
    git clone https://github.com/adnk0393/IMD-reduction.git
    cd IMD-reduction-fixed-main      
-   ```
+```
    
 2. Go to the download folder. Extract if you downloaded Zipped folder.
 
