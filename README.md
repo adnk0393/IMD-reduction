@@ -10,7 +10,7 @@ In the implementation used here:
 - FeO + MgO + MnO are combined into a ferromagnesian aggregate, M.
 - Na2O + K2O are combined into an alkali aggregate, A.
 
-** **Note** These aggregate variables are not intended to represent complete crystallographic site occupancies for all mineral groups. They are crystal-chemically motivated proxies for accomodating major substitutional trends to remove dimensionality prior to performing group-level mineral classification.
+**Note** These aggregate variables are not intended to represent complete crystallographic site occupancies for all mineral groups. They are crystal-chemically motivated proxies for accomodating major substitutional trends to remove dimensionality prior to performing group-level mineral classification.
 
 ---
 
