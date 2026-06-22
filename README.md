@@ -88,12 +88,17 @@ streamlit run MinNet/main.py
 ```
 
 ### Training and Evaluation
-Run the scripts (.ipynb) using Jupyter notebook to retrain or evaluate the KNN, SVM, and RF models across combinations C1–C4:
+Run the scripts (.ipynb) using Jupyter notebook to retrain or evaluate the ML models across combinations C1–C4:
+
 ```bash
-cd IMD-reduction-fixed-main/model training and evaluation scripts/
+cd IMD-reduction-fixed-main/model training and evaluation scripts/<model_name>
 jupyter notebook
 ```
-**Note:** Ensure that the training and validation datasets are available in the expected folder path specified in each notebook. The first column should contain a sample or point identifier, such as `SNo`, and should not be one of the oxide-composition columns. The order of oxide columns does not matter if all required oxide columns are present with the expected names.
+**Note:** 
+
+1. Replace the <model_name> with the model of your choice
+
+2. Ensure that the training and validation datasets are available in the expected folder path specified in each notebook. The first column should contain a sample or point identifier, such as `SNo`, and should not be one of the oxide-composition columns. The order of oxide columns does not matter if all required oxide columns are present with the expected names.
 
 ---
 
