@@ -1,9 +1,9 @@
 # MinNet: IMD preprocessing for automated mineral-group classification
 ## 🌟 Core overview
 
-MinNet is a Python/Streamlit implementation of Inherent Mineral Dimensionality (IMD) preprocessing for automated mineral-group classification from oxide-composition tables. It is designed for EPMA- and SEM–EDS-derived mineral analyses where the input consists of major-oxide wt.% values.
+MinNet is a Python/Streamlit implementation of Inherent Mineral Dimensionality (IMD) preprocessing for automated mineral classification from oxide-composition tables. It is designed for EPMA- and SEM–EDS-derived mineral analyses where the input consists of major-oxide wt.% values.
 
-Automated mineral identification from oxide tables is difficult because such datasets commonly contain incomplete oxide reporting, uneven class representation and chemically redundant variables. IMD addresses the redundancy part of this problem by converting oxide wt.% values to normalized mol.% and then aggregating selected substitutable oxides into fixed, chemically interpretable features before supervised classification.
+Automated mineral classification from oxide tables is difficult because such datasets commonly contain incomplete oxide reporting, uneven class representation and chemically redundant variables. These issues lead to poor accuracy of the AMC on the uncommon/rarer mineral composition, especially in mineral groups with numerous exchange vectors. IMD addresses the redundancy part of this problem by converting oxide wt.% values to normalized mol.% and then aggregating selected substitutable oxides into fixed, chemically interpretable features before supervised classification.
 
 In the implementation used here:
 
