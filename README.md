@@ -96,13 +96,13 @@ jupyter notebook
 
 ## Contributors
 
-[Dr. Aditya Naik (Post-doctoral Fellow, IISER Mohali)](mailto:naik32.an@gmail.com)
+[Aditya Naik (Post-doctoral Fellow, IISER Mohali)](mailto:naik32.an@gmail.com)
 
-[Dr. Sourabh Bhattacharya (Assistant Professor, IISER Mohali)](mailto:sourabh@iisermohali.ac.in)
+[Sourabh Bhattacharya (Assistant Professor, IISER Mohali)](mailto:sourabh@iisermohali.ac.in)
 
-[Dr. Jitendra Kumar Roy (NPDF Fellow, IIT Kharagpur)](mailto:royjitendra11@gmail.com)
+[Jitendra Kumar Roy (NPDF Fellow, IIT Kharagpur)](mailto:royjitendra11@gmail.com)
 
-[Krishna Oraon (PhD Scholar)](mailto:ph24082@iisermohali.ac.in)
+[Krishna Oraon (PhD Scholar, IISER Mohali)](mailto:ph24082@iisermohali.ac.in)
 
 ---
 
