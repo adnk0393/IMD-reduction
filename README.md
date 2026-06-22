@@ -65,7 +65,10 @@ All required libraries are listed in the requirements.txt file. Install them usi
    git clone https://github.com
    cd IMD-reduction-fixed-main      
    ```
-2. Install required python libraries (assumes python is already installed)
+   
+2. Go to the download folder. Extract if you downloaded Zipped folder.
+
+3. Install required python libraries (assumes python is already installed)
 ```bash
    pip install -r requirements.txt
 ```
