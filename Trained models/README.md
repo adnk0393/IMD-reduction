@@ -9,7 +9,9 @@
 - Naming convention for models, scalers and label encoders:
 
     **Model**: <model>_<input_combination>.mdl
+  
     **Scaler**: Scaler_<model>_<input_combination>.scl
+  
     **Label Encoders**: Labeler_<model>_<input_combination>.lbl
 
 - General pipeline for model implementation is:
