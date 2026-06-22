@@ -1,7 +1,7 @@
 # MinNet: IMD preprocessing for automated mineral-group classification
 ## 🌟 Core overview
 
-MinNet is a Python/Streamlit implementation of Inherent Mineral Dimensionality (IMD) preprocessing for automated mineral-group classification from oxide-composition tables. It is designed for EPMA- and SEM–EDS-derived mineral analyses where the input consists of major-oxide wt.% values rather than image-based mineral maps.
+MinNet is a Python/Streamlit implementation of Inherent Mineral Dimensionality (IMD) preprocessing for automated mineral-group classification from oxide-composition tables. It is designed for EPMA- and SEM–EDS-derived mineral analyses where the input consists of major-oxide wt.% values.
 
 Automated mineral identification from oxide tables is difficult because such datasets commonly contain incomplete oxide reporting, uneven class representation and chemically redundant variables. IMD addresses the redundancy part of this problem by converting oxide wt.% values to normalized mol.% and then aggregating selected substitutable oxides into fixed, chemically interpretable features before supervised classification.
 
@@ -10,7 +10,7 @@ In the implementation used here:
 - FeO + MgO + MnO are combined into a ferromagnesian aggregate, M.
 - Na2O + K2O are combined into an alkali aggregate, A.
 
-These aggregate variables are not intended to represent complete crystallographic site occupancies for all mineral groups. They are crystal-chemically motivated proxies for major substitutional trends relevant to group-level mineral classification.
+** **Note** These aggregate variables are not intended to represent complete crystallographic site occupancies for all mineral groups. They are crystal-chemically motivated proxies for major substitutional trends relevant to remove dimensionality prior to performing group-level mineral classification.
 
 ---
 
@@ -20,8 +20,8 @@ These aggregate variables are not intended to represent complete crystallographi
 - Evaluation of 12 classifier-input combinations using three classifiers: Support Vector Machine, k-Nearest Neighbors and Random Forest.
 - Four input schemes: raw oxides, IMD-M, IMD-M+A and PCA-transformed inputs.
 - Training and testing on 47,031 normalized oxide compositions spanning 19 common rock-forming mineral groups.
-- External validation on 3,445 independently compiled mineral compositions.
-- Streamlit-based MinNet application for reproducing and performing group-level mineral identification from EPMA- or SEM–EDS-derived oxide tables.
+- Verified against an external validation dataset of 3,445 independently compiled mineral records.
+- An interactive Streamlit web application to reproduce results and perform automated group-level mineral identification from user-uploaded EPMA or SEM-EDS oxide datasets.
 
 ## 📊 Experimental Setup
 
@@ -67,7 +67,7 @@ All required libraries are listed in the requirements.txt file. Install them usi
    ```
 2. Install required python libraries (assumes python is already installed)
 ```bash
-   pip install -r main/requirements.txt
+   pip install -r requirements.txt
 ```
 
 ---
