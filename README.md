@@ -102,7 +102,7 @@ jupyter notebook
 
 [Dr. Jitendra Kumar Roy (NPDF Fellow, IIT Kharagpur)](mailto:royjitendra11@gmail.com)
 
-Krishna Oraon
+[Krishna Oraon (PhD Scholar)](mailto:ph24082@iisermohali.ac.in)
 
 ---
 
