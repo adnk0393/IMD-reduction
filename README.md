@@ -21,7 +21,7 @@ These aggregate variables are not intended to represent complete crystallographi
 - Four input schemes: raw oxides, IMD-M, IMD-M+A and PCA-transformed inputs.
 - Training and testing on 47,031 normalized oxide compositions spanning 19 common rock-forming mineral groups.
 - External validation on 3,445 independently compiled mineral compositions.
-- Streamlit-based MinNet application for reproducible group-level mineral identification from EPMA- or SEM–EDS-derived oxide tables.
+- Streamlit-based MinNet application for reproducing and performing group-level mineral identification from EPMA- or SEM–EDS-derived oxide tables.
 
 ## 📊 Experimental Setup
 
@@ -41,7 +41,7 @@ MinNet evaluates **three machine learning models** across **four distinct input 
 ---
 
 ## 📁 Repository Structure
-* **`MinNet app/`**: Streamlit application for mineral-group prediction using the trained KNN model and C3 input scheme.
+* **`MinNet/`**: Streamlit application source codes for mineral-group prediction using the trained KNN model and C3 input scheme.
 * **`Pre-processing scripts/`**: Scripts used to preprocess and filter mineral-composition datasets.
 * **`Trained model/`**: Trained models, scaler objects and label-encoding files generated during the study.
 * **`Data/`**: Training, testing and external-validation datasets used in the manuscript.
@@ -81,7 +81,7 @@ Visit the link: https://minnet.streamlit.com
 Launch the interactive web application to visualize dimensionality reduction:
 ```bash
 cd IMD-reduction-fixed-main
-streamlit run Minnet app/main.py
+streamlit run MinNet/main.py
 ```
 
 ### Training and Evaluation
