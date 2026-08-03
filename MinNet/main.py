@@ -24,7 +24,7 @@ import streamlit as st
 oxlist = ["SiO2", "TiO2", "Al2O3", "FeO", "MnO", "MgO", "CaO", "Na2O", "K2O","P2O5","CO2"]
 oxlist1 = ["SiO2", "TiO2", "Al2O3", "M", "CaO", "A","P2O5","CO2"]
 oxide = pd.read_excel("MinNet/oxide_data.xlsx",index_col=0,sheet_name="Sheet1")
-mineral_oxygen = pd.read_excel("oxide_data.xlsx",index_col=0,sheet_name="Sheet2")
+mineral_oxygen = pd.read_excel("MinNet/oxide_data.xlsx",index_col=0,sheet_name="Sheet2")
 
 def load_model(model,inp_comb):
     mdl = model+"_"+inp_comb+".mdl"
