@@ -4,7 +4,7 @@ import os
 
 # data to be returned in the format SiO2, TiO2, Al2O3, FeO, MnO, MgO, CaO, Na2O, K2O
 
-oxide = pd.read_excel("oxide_data.xlsx", sheet_name="Sheet1",index_col=0,header=0)
+oxide = pd.read_excel("MinNet/oxide_data.xlsx", sheet_name="Sheet1",index_col=0,header=0)
 
 oxlist = ["SiO2", "TiO2", "Al2O3", "FeO", "MnO", "MgO", "CaO", "Na2O", "K2O"]
 
