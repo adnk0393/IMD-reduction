@@ -147,7 +147,7 @@ def create_model_table(data, model, scaler, input_combination):
     
     if (input_combination == "C4"):
         pc = "PCA_" + model + "_" + input_combination + "_5_components.pc"
-        pc = load(pc)
+        pc = load("MinNet/"+pc)
         scaled_data = pc.transform(scaled_data)
 
     return(scaled_data)
