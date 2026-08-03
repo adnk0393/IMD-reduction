@@ -34,10 +34,10 @@ def load_model(model,inp_comb):
         mdl = model+"_"+inp_comb+"_5_components.mdl"
         scaler = 'Scaler_'+model+"_"+inp_comb+"_5_components.scl"
         labeler = "Labeler_"+model+"_"+inp_comb+"_5_components.lbl"
-    mdl = load(mdl)
-    labeler = load(labeler)
+    mdl = load("MinNet/"+mdl)
+    labeler = load("MinNet/"+labeler)
     if(model != "RF"):
-        scaler = load(scaler)
+        scaler = load("MinNet/"+scaler)
         return([mdl,scaler,labeler])
     else:
         scaler = None
