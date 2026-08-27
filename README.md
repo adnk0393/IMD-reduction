@@ -108,9 +108,7 @@ jupyter notebook
 
 [Sourabh Bhattacharya (Assistant Professor, IISER Mohali)](mailto:sourabh@iisermohali.ac.in)
 
-[Jitendra Kumar Roy (NPDF Fellow, IIT Kharagpur)](mailto:royjitendra11@gmail.com)
-
-[Krishna Oraon (PhD Scholar, IISER Mohali)](mailto:ph24082@iisermohali.ac.in)
+[Jitendra Kumar Roy (PhD scholar, IISER Mohali)](mailto:royjitendra11@gmail.com)
 
 ---
 
